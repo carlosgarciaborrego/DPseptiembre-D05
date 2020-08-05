@@ -1,0 +1,16 @@
+anonymous.notice.form.label.picture = Imagen:
+anonymous.notice.form.label.title = Título:
+anonymous.notice.form.label.creation = Creación:
+anonymous.notice.form.label.deadline = Fecha límite:
+anonymous.notice.form.label.body = Cuerpo:
+anonymous.notice.form.label.links = Enlaces:
+anonymous.notice.form.label.active = Activo:
+anonymous.notice.form.button.return = Atrás
+
+
+anonymous.notice.list.label.picture = Imagen
+anonymous.notice.list.label.title = Título
+anonymous.notice.list.label.creation = Creación
+anonymous.notice.list.label.deadline = Fecha límite
+anonymous.notice.list.label.body = Cuerpo
+anonymous.notice.list.label.links = Enlaces

@@ -1,0 +1,11 @@
+authenticated.application.form.label.ticker = Ticker:
+authenticated.application.form.label.creation = Creation:
+authenticated.application.form.label.statement = Statement:
+authenticated.application.form.label.offer = Offer:
+authenticated.application.form.button.return = Return
+
+
+authenticated.application.list.label.ticker = Ticker
+authenticated.application.list.label.creation = Creation
+authenticated.application.list.label.statement = Statement
+authenticated.application.list.label.offer = Offer

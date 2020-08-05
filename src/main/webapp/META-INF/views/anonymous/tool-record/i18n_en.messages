@@ -1,0 +1,19 @@
+anonymous.technologyTool.form.label.title = Title:
+anonymous.technologyTool.form.label.activitySector = Sector:
+anonymous.technologyTool.form.label.inventorName = Name of inventor:
+anonymous.technologyTool.form.label.description = Description:
+anonymous.technologyTool.form.label.website = Web site:
+anonymous.technologyTool.form.label.email = Email:
+anonymous.technologyTool.form.label.openSource = Is Open-Source:
+anonymous.technologyTool.form.label.stars = Stars:
+anonymous.technologyTool.form.button.return = Return
+
+
+anonymous.technologyTool.list.label.title = Title:
+anonymous.technologyTool.list.label.activitySector = Sector:
+anonymous.technologyTool.list.label.inventorName = Name of inventor:
+anonymous.technologyTool.list.label.description = Description:
+anonymous.technologyTool.list.label.website = Web site:
+anonymous.technologyTool.list.label.email = Email:
+anonymous.technologyTool.list.label.openSource = Is Open-Source:
+anonymous.technologyTool.list.label.stars = Stars:

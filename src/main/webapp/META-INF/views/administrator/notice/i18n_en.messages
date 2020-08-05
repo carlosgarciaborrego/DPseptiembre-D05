@@ -1,0 +1,19 @@
+administrator.notice.form.label.picture = Picture:
+administrator.notice.form.label.title = Title:
+administrator.notice.form.label.creation = Creation:
+administrator.notice.form.label.deadline = Deadline:
+administrator.notice.form.label.body = Body:
+administrator.notice.form.label.links = Links:
+administrator.notice.form.label.active = Active:
+administrator.notice.form.button.return = Return
+administrator.notice.form.button.create = Create
+administrator.notice.form.button.update = Update
+administrator.notice.form.button.delete = Delete
+
+
+administrator.notice.list.label.picture = Picture
+administrator.notice.list.label.title = Title
+administrator.notice.list.label.creation = Creation
+administrator.notice.list.label.deadline = Deadline
+administrator.notice.list.label.body = Body
+administrator.notice.list.label.links = Links

@@ -1,0 +1,19 @@
+authenticated.technologyTool.form.label.title = Title:
+authenticated.technologyTool.form.label.activitySector = Sector:
+authenticated.technologyTool.form.label.inventorName = Name of inventor:
+authenticated.technologyTool.form.label.description = Description:
+authenticated.technologyTool.form.label.website = Web site:
+authenticated.technologyTool.form.label.email = Email:
+authenticated.technologyTool.form.label.openSource = Is Open-Source:
+authenticated.technologyTool.form.label.stars = Stars:
+authenticated.technologyTool.form.button.return = Return
+
+
+authenticated.technologyTool.list.label.title = Title:
+authenticated.technologyTool.list.label.activitySector = Sector:
+authenticated.technologyTool.list.label.inventorName = Name of inventor:
+authenticated.technologyTool.list.label.description = Description:
+authenticated.technologyTool.list.label.website = Web site:
+authenticated.technologyTool.list.label.email = Email:
+authenticated.technologyTool.list.label.openSource = Is Open-Source:
+authenticated.technologyTool.list.label.stars = Stars:

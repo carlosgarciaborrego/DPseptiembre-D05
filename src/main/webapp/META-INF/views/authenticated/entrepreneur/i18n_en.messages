@@ -1,0 +1,11 @@
+authenticated.entrepreneur.form.label.startUpName = Start-up Name:
+authenticated.entrepreneur.form.label.activitySector = Sector:
+authenticated.entrepreneur.form.label.qualificationRecord = Qualification Record:
+authenticated.entrepreneur.form.label.skillRecord = Skill Record:
+authenticated.entrepreneur.form.button.return = Return
+
+
+authenticated.entrepreneur.list.label.startUpName = Start-up Name
+authenticated.entrepreneur.list.label.activitySector = Sector
+authenticated.entrepreneur.list.label.qualificationRecord = Qualification Record
+authenticated.entrepreneur.list.label.skillRecord = Skill Record

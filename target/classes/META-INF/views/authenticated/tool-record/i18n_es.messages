@@ -1,0 +1,19 @@
+authenticated.technologyTool.form.label.title = Título:
+authenticated.technologyTool.form.label.activitySector = Sector:
+authenticated.technologyTool.form.label.inventorName = Nombre del inventor:
+authenticated.technologyTool.form.label.description = Descripción:
+authenticated.technologyTool.form.label.website = Sitio web:
+authenticated.technologyTool.form.label.email = Correo:
+authenticated.technologyTool.form.label.openSource = Es Código-Abierto:
+authenticated.technologyTool.form.label.stars = Estrellas:
+authenticated.technologyTool.form.button.return = Atrás
+
+
+authenticated.technologyTool.list.label.title = Título:
+authenticated.technologyTool.list.label.activitySector = Sector:
+authenticated.technologyTool.list.label.inventorName = Nombre del inventor:
+authenticated.technologyTool.list.label.description = Descripción:
+authenticated.technologyTool.list.label.website = Sitio web:
+authenticated.technologyTool.list.label.email = Correo:
+authenticated.technologyTool.list.label.openSource = Es Código-abierto:
+authenticated.technologyTool.list.label.stars = Estrellas:

@@ -1,0 +1,20 @@
+administrator.inquiry.form.label.title = Title:
+administrator.inquiry.form.label.creation = Creation:
+administrator.inquiry.form.label.deadline = Deadline:
+administrator.inquiry.form.label.paragraphs = Paragraphs:
+administrator.inquiry.form.label.minPrice = MinPrice:
+administrator.inquiry.form.label.maxPrice = MaxPrice:
+administrator.inquiry.form.label.email = Email:
+administrator.inquiry.form.button.return = Return
+administrator.inquiry.form.button.create = Create
+administrator.inquiry.form.button.update = Update
+administrator.inquiry.form.button.delete = Delete
+
+
+administrator.inquiry.list.label.title = Title
+administrator.inquiry.list.label.creation = Creation
+administrator.inquiry.list.label.deadline = Deadline
+administrator.inquiry.list.label.paragraphs = Paragraphs
+administrator.inquiry.list.label.minPrice = MinPrice
+administrator.inquiry.list.label.maxPrice = MaxPrice
+administrator.inquiry.list.label.email = Email

@@ -1,0 +1,19 @@
+administrator.overture.form.label.title = Título:
+administrator.overture.form.label.creation = Creación:
+administrator.overture.form.label.deadline = Fecha límite:
+administrator.overture.form.label.paragraphs = Párrafos:
+administrator.overture.form.label.minPrice = Precio min:
+administrator.overture.form.label.maxPrice = Precio max:
+administrator.overture.form.label.email = Correo:
+administrator.overture.form.button.return = Atrás
+administrator.overture.form.button.create = Crear
+administrator.overture.form.button.update = Actualizar
+administrator.overture.form.button.delete = Eliminar
+
+administrator.overture.list.label.title = Título
+administrator.overture.list.label.creation = Creación
+administrator.overture.list.label.deadline = Fecha límite
+administrator.overture.list.label.paragraphs = Párrafos
+administrator.overture.list.label.minPrice = Precio min
+administrator.overture.list.label.maxPrice = Precio max
+administrator.overture.list.label.email = Correo

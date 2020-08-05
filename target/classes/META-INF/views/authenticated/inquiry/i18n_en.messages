@@ -1,0 +1,17 @@
+authenticated.inquiry.form.label.title = Title:
+authenticated.inquiry.form.label.creation = Creation:
+authenticated.inquiry.form.label.deadline = Deadline:
+authenticated.inquiry.form.label.paragraphs = Paragraphs:
+authenticated.inquiry.form.label.minPrice = MinPrice:
+authenticated.inquiry.form.label.maxPrice = MaxPrice:
+authenticated.inquiry.form.label.email = Email:
+authenticated.inquiry.form.button.return = Return
+
+
+authenticated.inquiry.list.label.title = Title
+authenticated.inquiry.list.label.creation = Creation
+authenticated.inquiry.list.label.deadline = Deadline
+authenticated.inquiry.list.label.paragraphs = Paragraphs
+authenticated.inquiry.list.label.minPrice = MinPrice
+authenticated.inquiry.list.label.maxPrice = MaxPrice
+authenticated.inquiry.list.label.email = Email

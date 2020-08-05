@@ -1,0 +1,17 @@
+authenticated.overture.form.label.title = Título:
+authenticated.overture.form.label.creation = Creación:
+authenticated.overture.form.label.deadline = Fecha límite:
+authenticated.overture.form.label.paragraphs = Párrafos:
+authenticated.overture.form.label.minPrice = Precio min:
+authenticated.overture.form.label.maxPrice = Precio max:
+authenticated.overture.form.label.email = Correo:
+authenticated.overture.form.button.return = Atrás
+
+
+authenticated.overture.list.label.title = Título
+authenticated.overture.list.label.creation = Creación
+authenticated.overture.list.label.deadline = Fecha límite
+authenticated.overture.list.label.paragraphs = Párrafos
+authenticated.overture.list.label.minPrice = Precio min
+authenticated.overture.list.label.maxPrice = Precio max
+authenticated.overture.list.label.email = Correo
