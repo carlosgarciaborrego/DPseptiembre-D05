@@ -9,6 +9,7 @@ authenticated.investmentRound.form.label.active = Active:
 authenticated.investmentRound.form.label.entrepreneur = Entrepreneur:
 authenticated.investmentRound.form.button.return = Return
 
+authenticated.investmentRoundform.label.activity = Activities
 
 authenticated.investmentRound.list.label.ticker = Ticker
 authenticated.investmentRound.list.label.creation = Creation
