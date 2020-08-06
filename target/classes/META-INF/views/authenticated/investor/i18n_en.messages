@@ -2,7 +2,8 @@ authenticated.investor.form.label.name = Name:
 authenticated.investor.form.label.activitySector = Sector:
 authenticated.investor.form.label.profile = Profile:
 authenticated.investor.form.button.return = Return
-
+authenticated.investor.form.button.create = Create
+authenticated.investor.form.button.update = Update
 
 authenticated.investor.list.label.name = Name
 authenticated.investor.list.label.activitySector = Sector

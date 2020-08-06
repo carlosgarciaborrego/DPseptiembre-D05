@@ -3,7 +3,8 @@ authenticated.entrepreneur.form.label.activitySector = Sector:
 authenticated.entrepreneur.form.label.qualificationRecord = Qualification Record:
 authenticated.entrepreneur.form.label.skillRecord = Skill Record:
 authenticated.entrepreneur.form.button.return = Return
-
+authenticated.entrepreneur.form.button.create = Create
+authenticated.entrepreneur.form.button.update = Update
 
 authenticated.entrepreneur.list.label.startUpName = Start-up Name
 authenticated.entrepreneur.list.label.activitySector = Sector
