@@ -11,6 +11,11 @@ authenticated.investmentRound.form.button.return = Atrás
 authenticated.investmentRoundform.label.activity = Actividades
 
 
+entrepreneur.investmentRound.form.button.update = Actualizar
+entrepreneur.investmentRound.form.button.create = Crear
+entrepreneur.investmentRound.form.button.delete = Eliminar
+
+
 authenticated.investmentRound.list.label.ticker = Ticker
 authenticated.investmentRound.list.label.creation = Creación
 authenticated.investmentRound.list.label.kindRound = Tipo de ronda
