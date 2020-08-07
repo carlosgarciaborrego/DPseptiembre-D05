@@ -21,6 +21,8 @@
 	<acme:form-submit test="${command == 'create'}" code="entrepreneur.investmentRound.form.button.create" action="/entrepreneur/investment-round/create"/>
 	<acme:form-submit test="${command == 'update'}" code="entrepreneur.investmentRound.form.button.update" action="/entrepreneur/investment-round/update"/>
 	<acme:form-submit test="${command == 'delete'}" code="entrepreneur.investmentRound.form.button.delete" action="/entrepreneur/investment-round/delete"/>
-	
+
+		<acme:form-submit code="entrepreneur.activity.form.label.create.activity" action="/entrepreneur/activity/create?id=${id}" method="get" />
+		
 </acme:form>
 

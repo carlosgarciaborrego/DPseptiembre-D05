@@ -3,6 +3,7 @@ authenticated.application.form.label.creation = Creation:
 authenticated.application.form.label.statement = Statement:
 authenticated.application.form.label.offer = Offer:
 authenticated.application.form.button.return = Return
+entrepreneur.investmentRound.ticker = The ticker must have this format "SSS-YY-NNNNNN", where "SSS" is the first three letters of the name of activity sector or if lower and its necessary, you continue with "X". "YY" are the last two digits of this year. "NNNNNN" are 6 digits.  
 
 
 authenticated.application.list.label.ticker = Ticker

@@ -78,9 +78,6 @@ public class EntrepreneurActivityUpdateService implements AbstractUpdateService<
 		assert entity != null;
 		assert errors != null;
 
-		if (entity.getInvestmentRound().getActive().equals(true)) {
-			errors.state(request, false, "title", "employer.duty.jobActive");
-		}
 	}
 
 	@Override

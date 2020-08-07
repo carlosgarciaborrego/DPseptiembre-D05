@@ -3,7 +3,6 @@ package acme.entities.investmentRounds;
 
 import java.util.Date;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Index;
 import javax.persistence.ManyToOne;
@@ -32,7 +31,6 @@ public class InvestmentRound extends DomainEntity {
 
 	private static final long	serialVersionUID	= -7841105927115374574L;
 
-	@Column(unique = true)
 	@NotBlank
 	private String				ticker;
 

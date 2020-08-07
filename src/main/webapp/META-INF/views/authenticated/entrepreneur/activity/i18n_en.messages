@@ -3,6 +3,10 @@ authenticated.activity.form.label.startDate = Start Date:
 authenticated.activity.form.label.endDate = End Date: 
 authenticated.activity.form.label.budget = Budget
 authenticated.activity.form.button.return = Return
+authenticated.activity.form.button.create = Activitiy Create
+authenticated.activity.form.button.update = Activity Update
+authenticated.activity.form.button.delete = Activity Delete
+
 
 authenticated.activity.list.label.title = Title:
 authenticated.activity.list.label.startDate = Start Date
