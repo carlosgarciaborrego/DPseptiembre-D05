@@ -37,7 +37,7 @@ public class EntrepreneurInvestmentRoundCreateService implements AbstractCreateS
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors, "creation", "active", "status");
+		request.bind(entity, errors, "creation", "active", "hasApp");
 	}
 
 	@Override
@@ -59,7 +59,7 @@ public class EntrepreneurInvestmentRoundCreateService implements AbstractCreateS
 		res = new InvestmentRound();
 		res.setEntrepreneur(entrepreneur);
 		res.setActive(false);
-		res.setStatus("Draft");
+		res.setHasApp(false);
 
 		return res;
 	}

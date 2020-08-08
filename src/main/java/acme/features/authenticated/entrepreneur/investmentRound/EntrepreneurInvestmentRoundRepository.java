@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.entities.activities.Activity;
+import acme.entities.applications.Application;
 import acme.entities.customisationParameters.CustomisationParameters;
 import acme.entities.investmentRounds.InvestmentRound;
 import acme.entities.roles.Entrepreneur;
@@ -32,4 +33,7 @@ public interface EntrepreneurInvestmentRoundRepository extends AbstractRepositor
 
 	@Query("select ua from CustomisationParameters ua")
 	CustomisationParameters findCustomParameters();
+
+	@Query("select a from Application a where a.investmentRound.id = ?1")
+	Collection<Application> findApplicationToThisInvestmentRound(int id);
 }

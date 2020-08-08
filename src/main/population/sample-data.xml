@@ -218,7 +218,7 @@
 		<property name="description" value="Descripcion de la prueba" />
 		<property name="amount" value="€300" />
 		<property name="link" value="http://www.enlace.com" />
-		<property name="status" value="Published" />
+		<property name="hasApp" value="false" />
 		<property name="active" value="true" />
 		<property name="entrepreneur" ref="entrepreneur1" />
 	</bean>
@@ -231,7 +231,7 @@
 		<property name="description" value="Descripcion de la inversion" />
 		<property name="amount" value="€400" />
 		<property name="link" value="http://www.myenlace.com" />
-		<property name="status" value="Published" />
+		<property name="hasApp" value="false" />
 		<property name="active" value="true" />
 		<property name="entrepreneur" ref="entrepreneur2" />
 	</bean>
@@ -244,7 +244,7 @@
 		<property name="description" value="Descripcion de investor3" />
 		<property name="amount" value="€100" />
 		<property name="link" value="http://www.nba.com" />
-		<property name="status" value="Draft" />
+		<property name="hasApp" value="false" />
 		<property name="active" value="false" />
 		<property name="entrepreneur" ref="entrepreneur2" />
 	</bean>

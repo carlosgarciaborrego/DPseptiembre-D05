@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.activities.Activity;
+import acme.entities.applications.Application;
 import acme.entities.customisationParameters.CustomisationParameters;
 import acme.entities.investmentRounds.InvestmentRound;
 import acme.entities.roles.Entrepreneur;
@@ -61,7 +62,7 @@ public class EntrepreneurInvestmentRoundUpdateService implements AbstractUpdateS
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "ticker", "kindRound", "title", "description", "amount", "link", "active", "status");
+		request.unbind(entity, model, "ticker", "kindRound", "title", "description", "amount", "link", "active", "hasApp");
 
 	}
 
@@ -95,6 +96,23 @@ public class EntrepreneurInvestmentRoundUpdateService implements AbstractUpdateS
 		assert entity != null;
 		assert errors != null;
 
+		boolean kindRoundCorrect = false;
+		String[] kinds = {
+			"SEED", "ANGEL", "SERIES-A", "SERIES-B", "SERIES-C", "BRIDGE"
+		};
+
+		if (entity.getKindRound() != null) {
+			for (String k : kinds) {
+				if (entity.getKindRound().equals(k)) {
+					kindRoundCorrect = true;
+					break;
+				} else {
+					kindRoundCorrect = false;
+				}
+			}
+		}
+		errors.state(request, kindRoundCorrect, "kindRound", "entrepreneur.investmentRound.kindRoundCorrect");
+
 		boolean moneyOK = false;
 		int idInvest = entity.getId();
 		Double total = new Double(0);
@@ -105,6 +123,7 @@ public class EntrepreneurInvestmentRoundUpdateService implements AbstractUpdateS
 					total = total + a.getBudget().getAmount();
 				}
 			}
+
 		}
 
 		CustomisationParameters custom = this.repository.findCustomParameters();
@@ -163,6 +182,9 @@ public class EntrepreneurInvestmentRoundUpdateService implements AbstractUpdateS
 			}
 			errors.state(request, moneyOK, "amount", "entrepreneur.investmentRound.money");
 
+			if (activities.isEmpty()) {
+				errors.state(request, false, "active", "entrepreneur.investmentRound.zero");
+			}
 		}
 	}
 
@@ -170,6 +192,13 @@ public class EntrepreneurInvestmentRoundUpdateService implements AbstractUpdateS
 	public void update(final Request<InvestmentRound> request, final InvestmentRound entity) {
 		assert request != null;
 		assert entity != null;
+
+		Collection<Application> tieneApps = this.repository.findApplicationToThisInvestmentRound(entity.getId());
+		if (tieneApps.isEmpty()) {
+			entity.setHasApp(false);
+		} else {
+			entity.setHasApp(true);
+		}
 
 		this.repository.save(entity);
 	}

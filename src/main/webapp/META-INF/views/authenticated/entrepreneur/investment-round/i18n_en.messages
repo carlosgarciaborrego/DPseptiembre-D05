@@ -7,7 +7,6 @@ authenticated.investmentRound.form.label.amount = Amount:
 authenticated.investmentRound.form.label.link = Link:
 authenticated.investmentRound.form.label.active = Final Mode:
 authenticated.investmentRound.form.label.entrepreneur = Entrepreneur:
-authenticated.investmentRound.form.label.status = Status:
 authenticated.investmentRound.form.button.return = Return
 authenticated.investmentRoundform.label.activity = Activities
 entrepreneur.activity.form.label.create.activity = Activity Create
@@ -19,6 +18,7 @@ entrepreneur.investmentRound.form.button.delete = Delete
 entrepreneur.investmentRound.kindRoundCorrect = The kind of rounds must be SEED, ANGEL, SERIES-A, SERIES-B, SERIES-C or BRIDGE
 entrepreneur.investmentRound.ticker = The ticker must have this format "SSS-YY-NNNNNN", where "SSS" is the first three letters of the name of activity sector or if lower and its necessary, you continue with "X". "YY" are the last two digits of this year. "NNNNNN" are 6 digits.  
 entrepreneur.investmentRound.money = The budget of activities is diferent of the amount of investmentRound
+entrepreneur.investmentRound.zero = Investment Round must has at least one activity
 entrepreneur.investmentRound.duplicatedTicker = This ticker already exists
 entrepreneur.investmentRound.porcenspam = There are spam in some fields
 

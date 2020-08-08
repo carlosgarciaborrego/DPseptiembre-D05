@@ -46,6 +46,8 @@ public class EntrepreneurActivityShowService implements AbstractShowService<Entr
 		assert model != null;
 
 		request.unbind(entity, model, "title", "startDate", "endDate", "budget");
+		model.setAttribute("finalMode", entity.getInvestmentRound().getActive());
+
 	}
 	@Override
 	public Activity findOne(final Request<Activity> request) {

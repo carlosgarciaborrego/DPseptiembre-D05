@@ -7,7 +7,6 @@ authenticated.investmentRound.form.label.amount = Cantidad:
 authenticated.investmentRound.form.label.link = Enlace:
 authenticated.investmentRound.form.label.active = Modo Final:
 authenticated.investmentRound.form.label.entrepreneur = Empresario:
-authenticated.investmentRound.form.label.status = Estado:
 authenticated.investmentRound.form.button.return = Atrás
 
 authenticated.investmentRoundform.label.activity = Actividades
