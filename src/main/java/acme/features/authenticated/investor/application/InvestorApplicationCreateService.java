@@ -99,6 +99,10 @@ public class InvestorApplicationCreateService implements AbstractCreateService<I
 
 		errors.state(request, tickerOK, "ticker", "entrepreneur.investmentRound.ticker");
 
+		boolean isDuplicated = false;
+		isDuplicated = this.repository.findByTicker(entity.getTicker()) != null;
+		errors.state(request, !isDuplicated, "ticker", "entrepreneur.investmentRound.duplicatedTicker");
+
 	}
 
 	@Override

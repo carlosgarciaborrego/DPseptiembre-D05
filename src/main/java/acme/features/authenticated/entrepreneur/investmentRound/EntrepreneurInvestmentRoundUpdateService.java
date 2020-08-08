@@ -1,11 +1,16 @@
 
 package acme.features.authenticated.entrepreneur.investmentRound;
 
-import java.util.Date;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.activities.Activity;
+import acme.entities.customisationParameters.CustomisationParameters;
 import acme.entities.investmentRounds.InvestmentRound;
 import acme.entities.roles.Entrepreneur;
 import acme.framework.components.Errors;
@@ -56,7 +61,7 @@ public class EntrepreneurInvestmentRoundUpdateService implements AbstractUpdateS
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "ticker", "kindRound", "title", "description", "amount", "link", "active");
+		request.unbind(entity, model, "ticker", "kindRound", "title", "description", "amount", "link", "active", "status");
 
 	}
 
@@ -90,59 +95,75 @@ public class EntrepreneurInvestmentRoundUpdateService implements AbstractUpdateS
 		assert entity != null;
 		assert errors != null;
 
-		boolean kindRoundCorrect = false;
-		String[] kinds = {
-			"SEED", "ANGEL", "SERIES-A", "SERIES-B", "SERIES-C", "BRIDGE"
-		};
-
-		for (String k : kinds) {
-			if (entity.getKindRound().equals(k)) {
-				kindRoundCorrect = true;
-				break;
-			} else {
-				kindRoundCorrect = false;
+		boolean moneyOK = false;
+		int idInvest = entity.getId();
+		Double total = new Double(0);
+		Collection<Activity> activities = this.repository.findActivitiesByInvestmentRoundId(idInvest);
+		if (activities != null && !activities.isEmpty()) {
+			for (Activity a : activities) {
+				if (a.getBudget() != null) {
+					total = total + a.getBudget().getAmount();
+				}
 			}
 		}
-		errors.state(request, kindRoundCorrect, "kindRound", "entrepreneur.investmentRound.kindRoundCorrect");
 
-		boolean tickerOK = false;
+		CustomisationParameters custom = this.repository.findCustomParameters();
 
-		if (entity.getTicker() != null && entity.getTicker().length() == 13) {
-			String priAux = entity.getEntrepreneur().getActivitySector().toUpperCase();
-			String primero = "";
-			Date segAux = new Date(System.currentTimeMillis() - 1);
-			String segundo = segAux.toString().substring(27, 29);
-			String tercero = entity.getTicker().substring(7, 13);
-			boolean ayuda = true;
+		double contSpam = 0.0;
+		double conPalabras = 0.0;
+		String todasPalabras = "";
+		todasPalabras = entity.getDescription() + " " + entity.getTitle();
+		String[] arrayPalabras = todasPalabras.split(" ");
+		List<String> listPalabras = Arrays.asList(arrayPalabras);
+		if (custom != null && StringUtils.isNotBlank(custom.getSpamWordsEn())) {
+			String engSpam = custom.getSpamWordsEn();
+			String[] arraySpam = engSpam.split(",");
+			List<String> listSpamEn = Arrays.asList(arraySpam);
+			for (String l : listPalabras) {
+				if (StringUtils.isNotBlank(l)) {
+					conPalabras++;
+					for (String s : listSpamEn) {
+						if (l.trim().toLowerCase().equals(s.trim().toLowerCase())) {
+							contSpam++;
+						}
 
-			if (priAux.length() >= 3) {
-				primero = priAux.substring(0, 3);
-				if (EntrepreneurInvestmentRoundUpdateService.esMayuscula(primero) == false) {
-					ayuda = false;
-				}
-			} else if (priAux.length() == 2) {
-				primero = priAux.substring(0, 2) + "X";
-				if (EntrepreneurInvestmentRoundUpdateService.esMayuscula(primero) == false) {
-					ayuda = false;
-				}
-			} else {
-				primero = priAux.substring(0, 1) + "XX";
-				if (EntrepreneurInvestmentRoundUpdateService.esMayuscula(primero) == false) {
-					ayuda = false;
+					}
 				}
 			}
+		}
+		if (custom != null && StringUtils.isNotBlank(custom.getSpamWordsEs())) {
+			String engSpam = custom.getSpamWordsEs();
+			String[] arraySpam = engSpam.split(",");
+			List<String> listSpamEs = Arrays.asList(arraySpam);
+			for (String l : listPalabras) {
+				if (StringUtils.isNotBlank(l)) {
+					for (String s : listSpamEs) {
+						if (l.trim().toLowerCase().equals(s.trim().toLowerCase())) {
+							if (StringUtils.isNotBlank(custom.getSpamWordsEn()) && !custom.getSpamWordsEn().contains(s.trim())) {
+								contSpam++;
+							}
+						}
 
-			if (ayuda == true && entity.getTicker().substring(0, 3).equals(primero) && entity.getTicker().substring(3, 4).equals("-") && entity.getTicker().substring(4, 6).equals(segundo) && entity.getTicker().substring(6, 7).equals("-")
-				&& this.isNumberInteger(tercero) == true) {
-				tickerOK = true;
-			} else {
-				tickerOK = false;
+					}
+				}
 			}
+		}
+		Double porcentajeSpam = contSpam / conPalabras * 100;
+
+		if (entity.getActive() != null && entity.getActive() == true) {
+
+			if (porcentajeSpam >= custom.getSpamThreshold()) {
+				errors.state(request, false, "active", "entrepreneur.investmentRound.porcenspam");
+			}
+
+			if (total.equals(entity.getAmount().getAmount())) {
+				moneyOK = true;
+			} else {
+				moneyOK = false;
+			}
+			errors.state(request, moneyOK, "amount", "entrepreneur.investmentRound.money");
 
 		}
-
-		errors.state(request, tickerOK, "ticker", "entrepreneur.investmentRound.ticker");
-
 	}
 
 	@Override

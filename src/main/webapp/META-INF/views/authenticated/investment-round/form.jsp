@@ -10,6 +10,7 @@
 	<acme:form-textbox code="authenticated.investmentRound.form.label.description" path="description"/>
 	<acme:form-money code="authenticated.investmentRound.form.label.amount" path="amount"/>
 	<acme:form-url code="authenticated.investmentRound.form.label.link" path="link"/>
+	<acme:form-textbox code="authenticated.investmentRound.form.label.status" path="status" readonly="true"/>
 	<acme:form-checkbox code="authenticated.investmentRound.form.label.active" path="active"/>
 	<acme:form-return code="authenticated.investmentRound.form.button.return"/>
 	

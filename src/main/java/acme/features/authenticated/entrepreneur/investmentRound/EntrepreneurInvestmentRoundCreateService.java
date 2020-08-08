@@ -1,11 +1,15 @@
 
 package acme.features.authenticated.entrepreneur.investmentRound;
 
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.customisationParameters.CustomisationParameters;
 import acme.entities.investmentRounds.InvestmentRound;
 import acme.entities.roles.Entrepreneur;
 import acme.framework.components.Errors;
@@ -33,7 +37,7 @@ public class EntrepreneurInvestmentRoundCreateService implements AbstractCreateS
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors, "creation", "active");
+		request.bind(entity, errors, "creation", "active", "status");
 	}
 
 	@Override
@@ -55,6 +59,7 @@ public class EntrepreneurInvestmentRoundCreateService implements AbstractCreateS
 		res = new InvestmentRound();
 		res.setEntrepreneur(entrepreneur);
 		res.setActive(false);
+		res.setStatus("Draft");
 
 		return res;
 	}
@@ -133,6 +138,56 @@ public class EntrepreneurInvestmentRoundCreateService implements AbstractCreateS
 
 		errors.state(request, tickerOK, "ticker", "entrepreneur.investmentRound.ticker");
 
+		boolean isDuplicated = false;
+		isDuplicated = this.repository.findByTicker(entity.getTicker()) != null;
+		errors.state(request, !isDuplicated, "ticker", "entrepreneur.investmentRound.duplicatedTicker");
+
+		CustomisationParameters custom = this.repository.findCustomParameters();
+
+		double contSpam = 0.0;
+		double conPalabras = 0.0;
+		String todasPalabras = "";
+		todasPalabras = entity.getDescription() + " " + entity.getTitle();
+		String[] arrayPalabras = todasPalabras.split(" ");
+		List<String> listPalabras = Arrays.asList(arrayPalabras);
+		if (custom != null && StringUtils.isNotBlank(custom.getSpamWordsEn())) {
+			String engSpam = custom.getSpamWordsEn();
+			String[] arraySpam = engSpam.split(",");
+			List<String> listSpamEn = Arrays.asList(arraySpam);
+			for (String l : listPalabras) {
+				if (StringUtils.isNotBlank(l)) {
+					conPalabras++;
+					for (String s : listSpamEn) {
+						if (l.trim().toLowerCase().equals(s.trim().toLowerCase())) {
+							contSpam++;
+						}
+
+					}
+				}
+			}
+		}
+		if (custom != null && StringUtils.isNotBlank(custom.getSpamWordsEs())) {
+			String engSpam = custom.getSpamWordsEs();
+			String[] arraySpam = engSpam.split(",");
+			List<String> listSpamEs = Arrays.asList(arraySpam);
+			for (String l : listPalabras) {
+				if (StringUtils.isNotBlank(l)) {
+					for (String s : listSpamEs) {
+						if (l.trim().toLowerCase().equals(s.trim().toLowerCase())) {
+							if (StringUtils.isNotBlank(custom.getSpamWordsEn()) && !custom.getSpamWordsEn().contains(s.trim())) {
+								contSpam++;
+							}
+						}
+
+					}
+				}
+			}
+		}
+		Double porcentajeSpam = contSpam / conPalabras * 100;
+
+		if (porcentajeSpam >= custom.getSpamThreshold()) {
+			errors.state(request, false, "active", "entrepreneur.investmentRound.porcenspam");
+		}
 	}
 
 	@Override

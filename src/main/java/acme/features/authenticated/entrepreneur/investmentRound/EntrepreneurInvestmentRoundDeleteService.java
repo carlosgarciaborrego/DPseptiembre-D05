@@ -55,7 +55,7 @@ public class EntrepreneurInvestmentRoundDeleteService implements AbstractDeleteS
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "ticker", "kindRound", "title", "description", "amount", "link", "active");
+		request.unbind(entity, model, "ticker", "kindRound", "title", "description", "amount", "link", "active", "status");
 	}
 
 	@Override

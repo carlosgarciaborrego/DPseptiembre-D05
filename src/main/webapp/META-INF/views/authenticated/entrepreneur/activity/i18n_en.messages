@@ -6,6 +6,7 @@ authenticated.activity.form.button.return = Return
 authenticated.activity.form.button.create = Activitiy Create
 authenticated.activity.form.button.update = Activity Update
 authenticated.activity.form.button.delete = Activity Delete
+entrepreneur.activity.startDate = The dates must be on Future and startDate must be before that endDate
 
 
 authenticated.activity.list.label.title = Title:

@@ -5,8 +5,9 @@ authenticated.investmentRound.form.label.title = Título:
 authenticated.investmentRound.form.label.description = Descripción:
 authenticated.investmentRound.form.label.amount = Cantidad:
 authenticated.investmentRound.form.label.link = Enlace:
-authenticated.investmentRound.form.label.active = Activo:
+authenticated.investmentRound.form.label.active = Modo Final:
 authenticated.investmentRound.form.label.entrepreneur = Empresario:
+authenticated.investmentRound.form.label.status = Estado:
 authenticated.investmentRound.form.button.return = Atrás
 authenticated.investmentRoundform.label.activity = Actividades
 entrepreneur.activity.form.label.create.activity = Crear Actividad
@@ -19,7 +20,9 @@ entrepreneur.investmentRound.form.button.delete = Eliminar
 
 entrepreneur.investmentRound.kindRoundCorrect = El tipo de ronda debe ser SEED, ANGEL, SERIES-A, SERIES-B, SERIES-C o BRIDGE
 entrepreneur.investmentRound.ticker = El ticker debe tener este formato "SSS-YY-NNNNNN", donde "SSS" son las tres primeras letras del nombre del sector de actividad o si es menor y es necesario, se continúa con "X". "YY" son los dos últimos dígitos de este año. "NNNNNN" son 6 dígitos.
-
+entrepreneur.investmentRound.money = El presupuesto total de las actividades es distinto a la cantidad de la ronda de inversion
+entrepreneur.investmentRound.duplicatedTicker = Este ticker ya existe
+entrepreneur.investmentRound.porcenspam = Hay spam en algunos campos
 
 authenticated.investmentRound.list.label.ticker = Ticker
 authenticated.investmentRound.list.label.creation = Creación

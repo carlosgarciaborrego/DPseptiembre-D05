@@ -51,6 +51,7 @@ master.menu.administrator.listToolRecord = Listar Registro Herramientas
 master.menu.administrator.createToolRecord = Crear Registro Herramienta
 master.menu.administrator.listChallenge = Listar Retos
 master.menu.administrator.createChallenge = Crear Reto
+master.menu.administrator.customisationparameters = Parametros personalizables
 
 
 # master.menu.authenticated ########################################################

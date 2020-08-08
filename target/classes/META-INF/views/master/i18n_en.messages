@@ -51,6 +51,7 @@ master.menu.administrator.listToolRecord = ToolRecord List
 master.menu.administrator.createToolRecord = ToolRecord Create
 master.menu.administrator.listChallenge = Challenge List
 master.menu.administrator.createChallenge = Challenge Create
+master.menu.administrator.customisationparameters = Customisation Parameters
 
 # master.menu.authenticated ########################################################
 master.menu.authenticated = Authenticated

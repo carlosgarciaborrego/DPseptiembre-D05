@@ -1,6 +1,8 @@
 
 package acme.features.authenticated.entrepreneur.activity;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -64,8 +66,19 @@ public class EntrepreneurActivityCreateService implements AbstractCreateService<
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+		boolean isFuture = false;
+		Date actual = new Date(System.currentTimeMillis() - 1);
 
-		//validate de budget
+		if (entity.getStartDate() != null && entity.getEndDate() != null) {
+			if (entity.getStartDate().before(actual) || entity.getEndDate().before(actual) || entity.getEndDate().before(entity.getStartDate())) {
+				isFuture = false;
+			} else {
+				isFuture = true;
+			}
+		}
+
+		errors.state(request, isFuture, "startDate", "entrepreneur.activity.startDate");
+
 	}
 
 	@Override

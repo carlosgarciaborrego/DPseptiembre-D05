@@ -1,13 +1,14 @@
-authenticated.activity.form.label.title = Title:
-authenticated.activity.form.label.startDate = Start Date:
-authenticated.activity.form.label.endDate = End Date: 
-authenticated.activity.form.label.budget = Budget
-authenticated.activity.form.button.return = Return
+authenticated.activity.form.label.title = Titulo:
+authenticated.activity.form.label.startDate = Fecha de inicio:
+authenticated.activity.form.label.endDate = Fecha de fin: 
+authenticated.activity.form.label.budget = Presupuesto:
+authenticated.activity.form.button.return = Atrás
 authenticated.activity.form.button.create = Crear Actividad
 authenticated.activity.form.button.update = Actualizar Actividad
 authenticated.activity.form.button.delete = Eliminar Actualidad
+entrepreneur.activity.startDate = Las fechas deben estar en fututo y la fecha de inicio debe ser anterior a la fecha de fin
 
-authenticated.activity.list.label.title = Title:
-authenticated.activity.list.label.startDate = Start Date
-authenticated.activity.list.label.endDate = End Date
-authenticated.activity.list.label.budget = Budget
+authenticated.activity.list.label.title = Título:
+authenticated.activity.list.label.startDate = Fecha de inicio
+authenticated.activity.list.label.endDate = Fecha de fin
+authenticated.activity.list.label.budget = Presupuesto

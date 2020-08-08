@@ -72,6 +72,16 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `customisation_parameters` (
+       `id` integer not null,
+        `version` integer not null,
+        `activity_sector` varchar(255),
+        `spam_threshold` double precision,
+        `spam_words_en` varchar(255),
+        `spam_words_es` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `entrepreneur` (
        `id` integer not null,
         `version` integer not null,
@@ -108,6 +118,7 @@
         `description` varchar(255),
         `kind_round` varchar(255),
         `link` varchar(255),
+        `status` varchar(255),
         `ticker` varchar(255),
         `title` varchar(255),
         `entrepreneur_id` integer not null,
@@ -211,9 +222,6 @@ create index IDX6fmsp547p4ql4cgit2hk0uxjs on `application` (`creation`);
 create index IDXnr284tes3x8hnd3h716tmb3fr on `challenge` (`deadline`);
 create index IDXbxl80lmv6juldr0kq8flif43f on `inquiry` (`creation`);
 create index IDXir1xhctjpl0x3ruy9r684wt53 on `investment_round` (`creation`);
-
-    alter table `investment_round` 
-       add constraint UK_408l1ohatdkkut5bkt0eu6ifs unique (`ticker`);
 create index IDX37edwdyfifn2sq6488g44wwfo on `notice` (`creation`);
 create index IDX3xo2sk5me8jgnqci92b2v6f1y on `overture` (`creation`);
 create index IDX1e3bnrgq94pm3lol85yf69dpk on `technology_record` (`stars`);
