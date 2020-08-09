@@ -5,7 +5,7 @@ authenticated.application.form.label.offer = Oferta:
 authenticated.application.form.button.return = Atrás
 entrepreneur.investmentRound.ticker = El ticker debe tener este formato "SSS-YY-NNNNNN", donde "SSS" son las tres primeras letras del nombre del sector de actividad o si es menor y es necesario, se continúa con "X". "YY" son los dos últimos dígitos de este año. "NNNNNN" son 6 dígitos.
 entrepreneur.investmentRound.duplicatedTicker = Este ticker ya existe
-
+investor.application.form.label.create.application = Crear
 
 authenticated.application.list.label.ticker = Ticker
 authenticated.application.list.label.creation = Creación

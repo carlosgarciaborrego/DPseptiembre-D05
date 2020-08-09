@@ -1,9 +1,12 @@
 
 package acme.features.authenticated.entrepreneur.investmentRound;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.activities.Activity;
 import acme.entities.investmentRounds.InvestmentRound;
 import acme.entities.roles.Entrepreneur;
 import acme.framework.components.Errors;
@@ -83,6 +86,11 @@ public class EntrepreneurInvestmentRoundDeleteService implements AbstractDeleteS
 
 		assert request != null;
 		assert entity != null;
+
+		Collection<Activity> activities = this.repository.findActivitiesByInvestmentRoundId(entity.getId());
+		for (Activity a : activities) {
+			this.repository.delete(a);
+		}
 
 		this.repository.delete(entity);
 	}

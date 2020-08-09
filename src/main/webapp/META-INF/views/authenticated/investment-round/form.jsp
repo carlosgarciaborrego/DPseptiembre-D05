@@ -2,7 +2,7 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags" %>
 
-<acme:form>
+<acme:form readonly="true">
 	<acme:form-textbox code="authenticated.investmentRound.form.label.ticker" path="ticker"/>
 	<acme:form-moment code="authenticated.investmentRound.form.label.creation" path="creation"/>
 	<acme:form-textbox code="authenticated.investmentRound.form.label.kindRound" path="kindRound"/>
@@ -15,6 +15,7 @@
 	
 	<acme:form-submit code="authenticated.investmentRoundform.label.activity" action="/authenticated/activity/list?id=${id}" method="get"/>
 	
-
+	<acme:form-submit code="authenticated.investor.application.form.label.application" action="/investor/application/create?id=${id}" method="get"/>
+	
 </acme:form>
 
