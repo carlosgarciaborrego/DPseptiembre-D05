@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.activities.Activity;
-import acme.entities.applications.Application;
 import acme.entities.customisationParameters.CustomisationParameters;
 import acme.entities.investmentRounds.InvestmentRound;
 import acme.entities.roles.Entrepreneur;
@@ -192,13 +191,6 @@ public class EntrepreneurInvestmentRoundUpdateService implements AbstractUpdateS
 	public void update(final Request<InvestmentRound> request, final InvestmentRound entity) {
 		assert request != null;
 		assert entity != null;
-
-		Collection<Application> tieneApps = this.repository.findApplicationToThisInvestmentRound(entity.getId());
-		if (tieneApps.isEmpty()) {
-			entity.setHasApp(false);
-		} else {
-			entity.setHasApp(true);
-		}
 
 		this.repository.save(entity);
 	}

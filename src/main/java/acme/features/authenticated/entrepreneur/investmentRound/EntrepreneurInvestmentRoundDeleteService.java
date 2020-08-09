@@ -95,6 +95,7 @@ public class EntrepreneurInvestmentRoundDeleteService implements AbstractDeleteS
 		for (Activity a : activities) {
 			this.repoActivity.delete(a);
 		}
+		System.out.println(activities);
 
 		this.repository.delete(entity);
 	}
