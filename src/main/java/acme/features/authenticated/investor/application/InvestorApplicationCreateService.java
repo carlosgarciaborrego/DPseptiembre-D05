@@ -111,7 +111,7 @@ public class InvestorApplicationCreateService implements AbstractCreateService<I
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors, "creation");
+		request.bind(entity, errors, "creation", "status", "answer");
 	}
 
 	@Override
@@ -136,6 +136,12 @@ public class InvestorApplicationCreateService implements AbstractCreateService<I
 		InvestmentRound investmentRound = this.repository.findInvestmentRoundById(request.getModel().getInteger("id"));
 		res.setInvestmentRound(investmentRound);
 		res.setInvestor(investor);
+
+		String answer = "";
+		String status = "Pending";
+
+		res.setAnswer(answer);
+		res.setStatus(status);
 
 		return res;
 

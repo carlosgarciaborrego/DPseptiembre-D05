@@ -19,10 +19,13 @@ public class EntrepreneurApplicationController extends AbstractController<Entrep
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private EntrepreneurApplicationShowService	showService;
+	private EntrepreneurApplicationShowService		showService;
 
 	@Autowired
-	private EntrepreneurApplicationListService	listService;
+	private EntrepreneurApplicationListService		listService;
+
+	@Autowired
+	private EntrepreneurApplicationUpdateService	updateService;
 
 
 	// Constructors -----------------------------------------------------------
@@ -31,6 +34,7 @@ public class EntrepreneurApplicationController extends AbstractController<Entrep
 	private void initialise() {
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 		super.addBasicCommand(BasicCommand.LIST, this.listService);
+		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
 	}
 
 }

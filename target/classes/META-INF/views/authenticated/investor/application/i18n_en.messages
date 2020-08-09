@@ -6,8 +6,12 @@ authenticated.application.form.button.return = Return
 entrepreneur.investmentRound.ticker = The ticker must have this format "SSS-YY-NNNNNN", where "SSS" is the first three letters of the name of activity sector or if lower and its necessary, you continue with "X". "YY" are the last two digits of this year. "NNNNNN" are 6 digits.  
 entrepreneur.investmentRound.duplicatedTicker = This ticker already exists
 investor.application.form.label.create.application = Create
+authenticated.application.form.label.status = Status:
+authenticated.application.form.label.answer = Answer:
 
 authenticated.application.list.label.ticker = Ticker
 authenticated.application.list.label.creation = Creation
 authenticated.application.list.label.statement = Statement
 authenticated.application.list.label.offer = Offer
+authenticated.application.list.label.status = Status
+authenticated.application.list.label.answer = Answer

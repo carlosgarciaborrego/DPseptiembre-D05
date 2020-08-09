@@ -9,6 +9,12 @@
 	</jstl:if>
 	<acme:form-textbox code="authenticated.application.form.label.statement" path="statement"/>
 	<acme:form-money code="authenticated.application.form.label.offer" path="offer"/>
+	
+	<jstl:if test="${command != 'create'}">
+		<acme:form-textbox code="authenticated.application.form.label.status" path="status" readonly="true"/>
+		<acme:form-textbox code="authenticated.application.form.label.answer" path="answer" readonly="true"/>
+	</jstl:if>
+	
 	<acme:form-return code="authenticated.application.form.button.return"/>
 
 	<acme:form-submit test="${command == 'create'}" code="authenticated.investor.application.form.label.application" action="/investor/application/create"/>

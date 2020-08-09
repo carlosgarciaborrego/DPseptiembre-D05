@@ -43,6 +43,11 @@ public class Application extends DomainEntity {
 	@Valid
 	private Money				offer;
 
+	@NotBlank
+	private String				status;
+
+	private String				answer;
+
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)

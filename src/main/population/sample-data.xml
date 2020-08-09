@@ -405,6 +405,8 @@
 		<property name="creation" value="2020/07/25 10:30" />
 		<property name="statement" value="Declaración escrita" />
 		<property name="offer" ref="money15" />
+		<property name="status" value="Accepted" />
+		<property name="answer" value="" />
 		<property name="investmentRound" ref="investmentRound1" />
 		<property name="investor" ref="investor1" />
 	</bean>
@@ -414,6 +416,8 @@
 		<property name="creation" value="2020/07/21 10:30" />
 		<property name="statement" value="Declaración escrita" />
 		<property name="offer" ref="money16" />
+		<property name="status" value="Pending" />
+		<property name="answer" value="" />
 		<property name="investmentRound" ref="investmentRound2" />
 		<property name="investor" ref="investor1" />
 	</bean>
@@ -423,6 +427,8 @@
 		<property name="creation" value="2020/07/25 10:30" />
 		<property name="statement" value="Declaración escrita" />
 		<property name="offer" ref="money17" />
+		<property name="status" value="Rejected" />
+		<property name="answer" value="Lo siento pero no se aceptan mas solicitudes" />
 		<property name="investmentRound" ref="investmentRound1" />
 		<property name="investor" ref="investor2" />
 	</bean>
@@ -432,6 +438,8 @@
 		<property name="creation" value="2020/07/24 10:30" />
 		<property name="statement" value="Declaración escrita" />
 		<property name="offer" ref="money18" />
+		<property name="status" value="Accepted" />
+		<property name="answer" value="" />
 		<property name="investmentRound" ref="investmentRound2" />
 		<property name="investor" ref="investor2" />
 	</bean>
@@ -441,6 +449,8 @@
 		<property name="creation" value="2020/07/20 10:30" />
 		<property name="statement" value="Declaración escrita" />
 		<property name="offer" ref="money19" />
+		<property name="status" value="Rejected" />
+		<property name="answer" value="No te queremos" />
 		<property name="investmentRound" ref="investmentRound1" />
 		<property name="investor" ref="investor1" />
 	</bean>

@@ -2,10 +2,13 @@ authenticated.application.form.label.ticker = Ticker:
 authenticated.application.form.label.creation = Creación:
 authenticated.application.form.label.statement = Declaración:
 authenticated.application.form.label.offer = Oferta:
+authenticated.application.form.label.answer = Answer:
 authenticated.application.form.button.return = Atrás
-
+authenticated.entrepreneur.application.form.label.answer = Si el estado es Rechazado, debes indicar el motivo
+authenticated.entrepreneur.form.button.update = Actualizar
 
 authenticated.application.list.label.ticker = Ticker
 authenticated.application.list.label.creation = Creación
+authenticated.application.form.label.answer = Answer
 authenticated.application.list.label.statement = Declaración
 authenticated.application.list.label.offer = Oferta

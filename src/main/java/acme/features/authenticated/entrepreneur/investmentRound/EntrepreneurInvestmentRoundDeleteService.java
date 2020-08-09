@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import acme.entities.activities.Activity;
 import acme.entities.investmentRounds.InvestmentRound;
 import acme.entities.roles.Entrepreneur;
+import acme.features.authenticated.entrepreneur.activity.EntrepreneurActivityRepository;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -19,7 +20,10 @@ import acme.framework.services.AbstractDeleteService;
 public class EntrepreneurInvestmentRoundDeleteService implements AbstractDeleteService<Entrepreneur, InvestmentRound> {
 
 	@Autowired
-	EntrepreneurInvestmentRoundRepository repository;
+	EntrepreneurInvestmentRoundRepository	repository;
+
+	@Autowired
+	EntrepreneurActivityRepository			repoActivity;
 
 
 	@Override
@@ -89,7 +93,7 @@ public class EntrepreneurInvestmentRoundDeleteService implements AbstractDeleteS
 
 		Collection<Activity> activities = this.repository.findActivitiesByInvestmentRoundId(entity.getId());
 		for (Activity a : activities) {
-			this.repository.delete(a);
+			this.repoActivity.delete(a);
 		}
 
 		this.repository.delete(entity);
