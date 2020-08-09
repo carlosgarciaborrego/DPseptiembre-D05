@@ -45,7 +45,6 @@ public class TechnologyRecord extends DomainEntity {
 	@Email
 	private String				email;
 
-	@NotNull
 	private Boolean				openSource;
 
 	@NotNull

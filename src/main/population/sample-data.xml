@@ -98,7 +98,7 @@
 		<property name="deadline" value="2020/11/10 11:19" />	
 		<property name="body" value="Noticia de NBA" />
 		<property name="links" value="https://www.nba.com" />
-		<property name="active" value="false" />
+		<property name="active" value="true" />
 	</bean>
 	
 	<bean name="notice3" class="acme.entities.notices.Notice">
@@ -230,7 +230,7 @@
 		<property name="kindRound" value="SERIES-A" />
 		<property name="title" value="Titulo de inversion" />
 		<property name="description" value="Descripcion de la inversion" />
-		<property name="amount" value="€400" />
+		<property name="amount" value="€200" />
 		<property name="link" value="http://www.myenlace.com" />
 		<property name="hasApp" value="false" />
 		<property name="active" value="true" />
@@ -256,7 +256,7 @@
 		<property name="title" value="act-12-001122" />
 		<property name="startDate" value="2020/09/01 08:30" />
 		<property name="endDate" value="2020/10/01 08:30" />
-		<property name="budget" value="€500" />
+		<property name="budget" value="€200" />
 		<property name="investmentRound" ref="investmentRound1" />
 	</bean>
 	
@@ -264,7 +264,7 @@
 		<property name="title" value="act-12-331122" />
 		<property name="startDate" value="2020/09/05 08:30" />
 		<property name="endDate" value="2020/11/04 08:30" />
-		<property name="budget" value="€500" />
+		<property name="budget" value="€100" />
 		<property name="investmentRound" ref="investmentRound1" />
 	</bean>
 	

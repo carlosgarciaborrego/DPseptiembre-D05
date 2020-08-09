@@ -420,7 +420,7 @@ has v</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>413</x>
-      <y>658</y>
+      <y>686</y>
       <w>406</w>
       <h>84</h>
     </coordinates>
@@ -440,7 +440,7 @@ has v</panel_attributes>
       <x>1015</x>
       <y>490</y>
       <w>406</w>
-      <h>91</h>
+      <h>112</h>
     </coordinates>
     <panel_attributes>Application
 --
@@ -448,6 +448,8 @@ has v</panel_attributes>
 + creation: Date {TemporalType.TIMESTAMP}
 + statement: String {NotBlank}
 + offer: Money {NotNull, Valid}
++ status: String {NotBlank}
++ answer: String
 + investmentRound: InvestmentRound {NotNull, Valid, ManyToOne(optional=false)}
 + investor: Investor {NotNull, Valid, ManyToOne(optional = false)}
 </panel_attributes>
@@ -459,11 +461,11 @@ has v</panel_attributes>
       <x>406</x>
       <y>483</y>
       <w>406</w>
-      <h>126</h>
+      <h>147</h>
     </coordinates>
     <panel_attributes>InvestmentRound
 --
-+ ticker: String {unique, NotBlank}
++ ticker: String {NotBlank}
 + creation: Date {TemporalType.TIMESTAMP}
 + kindRound: String {NotBlank}
 + title: String {NotBlank}
@@ -471,6 +473,8 @@ has v</panel_attributes>
 + amount: Money {NotNull,Valid}
 + link: String {URL}
 + active: Boolean {NotNull}
++ hasApp: Boolean {NotNull}
++ isInventor: Boolean {NotNull}
 + entrepreneur: Entrepreneur {NotNull, Valid, ManyToOne(optional = false)}
 </panel_attributes>
     <additional_attributes/>
@@ -560,21 +564,21 @@ style=wordwrap</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>616</x>
-      <y>602</y>
+      <y>623</y>
       <w>35</w>
-      <h>70</h>
+      <h>77</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1
 m2=0..*
 </panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
   </element>
   <element>
     <id>Text</id>
     <coordinates>
       <x>588</x>
-      <y>623</y>
+      <y>651</y>
       <w>70</w>
       <h>21</h>
     </coordinates>

@@ -75,7 +75,7 @@ public class AdministratorOvertureUpdateService implements AbstractUpdateService
 			}
 		}
 
-		errors.state(request, isFuture, "deadline", "Deadline must be a date in future ");
+		errors.state(request, isFuture, "deadline", "administrator.inquiry.deadline");
 
 		if (entity.getMaxPrice() != null && entity.getMinPrice() != null) {
 			if (entity.getMaxPrice().getAmount() < entity.getMinPrice().getAmount()) {
@@ -85,7 +85,7 @@ public class AdministratorOvertureUpdateService implements AbstractUpdateService
 			}
 		}
 
-		errors.state(request, isOK, "maxPrice", "MaxPrice must be higher or equal that  minPrice ");
+		errors.state(request, isOK, "maxPrice", "administrator.inquiry.maxPrice");
 
 	}
 

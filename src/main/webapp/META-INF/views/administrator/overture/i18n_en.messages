@@ -9,6 +9,8 @@ administrator.overture.form.button.return = Return
 administrator.overture.form.button.create = Create
 administrator.overture.form.button.update = Update
 administrator.overture.form.button.delete = Delete
+administrator.inquiry.deadline = Deadline must be a date in future
+administrator.inquiry.maxPrice = MaxPrice must be higher or equal that  minPrice
 
 
 administrator.overture.list.label.title = Title

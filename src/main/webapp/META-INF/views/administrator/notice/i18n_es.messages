@@ -4,11 +4,13 @@ administrator.notice.form.label.creation = Creación:
 administrator.notice.form.label.deadline = Fecha límite:
 administrator.notice.form.label.body = Cuerpo:
 administrator.notice.form.label.links = Enlaces:
-administrator.notice.form.label.active = Activo:
 administrator.notice.form.button.return = Atrás
 administrator.notice.form.button.create = Crear
 administrator.notice.form.button.update = Actualizar
 administrator.notice.form.button.delete = Eliminar
+administrator.notice.form.label.active = Activo
+administrator.inquiry.deadline = La fecha límite debe ser en el futuro.
+administrator.notice.active = El botón Activo debe ser seleccionado para crear una noticia
 
 
 administrator.notice.list.label.picture = Imagen

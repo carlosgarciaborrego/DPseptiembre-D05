@@ -4,9 +4,8 @@ authenticated.notice.form.label.creation = Creation:
 authenticated.notice.form.label.deadline = Deadline:
 authenticated.notice.form.label.body = Body:
 authenticated.notice.form.label.links = Links:
-authenticated.notice.form.label.active = Active:
 authenticated.notice.form.button.return = Return
-
+authenticated.notice.form.label.active = Active
 
 authenticated.notice.list.label.picture = Picture
 authenticated.notice.list.label.title = Title

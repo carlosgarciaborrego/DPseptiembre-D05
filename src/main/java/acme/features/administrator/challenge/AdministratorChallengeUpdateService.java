@@ -77,7 +77,7 @@ public class AdministratorChallengeUpdateService implements AbstractUpdateServic
 			}
 		}
 
-		errors.state(request, isFuture, "deadline", "Deadline must be at least 30 days in future ");
+		errors.state(request, isFuture, "deadline", "administrator.challenge.deadline");
 	}
 
 	@Override

@@ -43,7 +43,7 @@ public class AdministratorNoticeCreateService implements AbstractCreateService<A
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "picture", "title", "deadline", "body", "active", "links", "active");
+		request.unbind(entity, model, "picture", "title", "deadline", "body", "links", "active");
 	}
 
 	@Override
@@ -72,14 +72,17 @@ public class AdministratorNoticeCreateService implements AbstractCreateService<A
 			}
 		}
 
-		errors.state(request, isFuture, "deadline", "Deadline must be a date in future ");
+		errors.state(request, isFuture, "deadline", "administrator.inquiry.deadline");
 
-		if (entity.getActive() != true) {
-			isActive = false;
-		} else {
-			isActive = true;
+		if (entity.getActive() != null) {
+			if (entity.getActive().equals(false)) {
+				isActive = false;
+			} else {
+				isActive = true;
+			}
 		}
-		errors.state(request, isActive, "active", "Active must be true");
+
+		errors.state(request, isActive, "active", "administrator.notice.active");
 
 	}
 

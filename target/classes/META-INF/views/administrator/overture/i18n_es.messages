@@ -9,6 +9,10 @@ administrator.overture.form.button.return = Atrás
 administrator.overture.form.button.create = Crear
 administrator.overture.form.button.update = Actualizar
 administrator.overture.form.button.delete = Eliminar
+administrator.inquiry.deadline = La fecha límite debe ser en el futuro.
+administrator.inquiry.maxPrice = El precio máximo debe ser igual o mayor que el precio mínimo
+
+
 
 administrator.overture.list.label.title = Título
 administrator.overture.list.label.creation = Creación

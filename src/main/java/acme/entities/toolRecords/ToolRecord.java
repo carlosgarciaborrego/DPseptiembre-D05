@@ -45,7 +45,6 @@ public class ToolRecord extends DomainEntity {
 	@Email
 	private String				email;
 
-	@NotNull
 	private Boolean				openSource;
 
 	@NotNull

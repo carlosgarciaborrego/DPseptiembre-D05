@@ -10,7 +10,6 @@
 	<acme:form-textarea code="authenticated.notice.form.label.body" path="body"/>
 	<acme:form-url code="authenticated.notice.form.label.links" path="links"/>
 	<acme:form-checkbox code="authenticated.notice.form.label.active" path="active"/>
-	
 	<acme:form-return code="authenticated.notice.form.button.return"/>
 </acme:form>
 

@@ -7,10 +7,11 @@ administrator.challenge.form.label.goalAverage = Objetivo Medio:
 administrator.challenge.form.label.rewardAverage = Recompensa Medio:
 administrator.challenge.form.label.goalExpert = Objetivo Experto:
 administrator.challenge.form.label.rewardExpert = Recompensa Experto:
-administrator.challenge.form.button.return = Return
+administrator.challenge.form.button.return = Atrás
 administrator.challenge.form.button.create = Crear
 administrator.challenge.form.button.update = Actualizar
 administrator.challenge.form.button.delete = Eliminar
+administrator.challenge.deadline = La fecha límite tiene que ser al menos 30 dias en el futuro
 
 
 administrator.challenge.list.label.title = Título

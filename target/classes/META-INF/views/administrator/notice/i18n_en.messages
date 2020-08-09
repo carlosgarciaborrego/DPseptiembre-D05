@@ -4,12 +4,13 @@ administrator.notice.form.label.creation = Creation:
 administrator.notice.form.label.deadline = Deadline:
 administrator.notice.form.label.body = Body:
 administrator.notice.form.label.links = Links:
-administrator.notice.form.label.active = Active:
 administrator.notice.form.button.return = Return
 administrator.notice.form.button.create = Create
 administrator.notice.form.button.update = Update
 administrator.notice.form.button.delete = Delete
-
+administrator.notice.form.label.active = Active
+administrator.inquiry.deadline = Deadline must be a date in future
+administrator.notice.active = Active button must be clicked to save this notice
 
 administrator.notice.list.label.picture = Picture
 administrator.notice.list.label.title = Title

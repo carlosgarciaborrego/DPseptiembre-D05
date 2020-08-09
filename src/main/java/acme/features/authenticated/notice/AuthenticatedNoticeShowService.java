@@ -31,7 +31,7 @@ public class AuthenticatedNoticeShowService implements AbstractShowService<Authe
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "picture", "title", "creation", "deadline", "body", "active", "links", "active");
+		request.unbind(entity, model, "picture", "title", "creation", "deadline", "body", "links", "active");
 	}
 
 	@Override
