@@ -15,7 +15,8 @@
 	
 	<acme:form-submit code="authenticated.investmentRoundform.label.activity" action="/authenticated/activity/list?id=${id}" method="get"/>
 	
+	<jstl:if test="${isInvestor == true}">
 	<acme:form-submit code="authenticated.investor.application.form.label.application" action="/investor/application/create?id=${id}" method="get"/>
-	
+	</jstl:if>
 </acme:form>
 

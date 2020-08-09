@@ -60,6 +60,9 @@ public class InvestmentRound extends DomainEntity {
 	private Boolean				hasApp;
 
 	@NotNull
+	private Boolean				isInvestor;
+
+	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
 	private Entrepreneur		entrepreneur;

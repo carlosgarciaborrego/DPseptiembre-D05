@@ -119,6 +119,7 @@
         `creation` datetime(6),
         `description` varchar(255),
         `has_app` bit,
+        `is_investor` bit,
         `kind_round` varchar(255),
         `link` varchar(255),
         `ticker` varchar(255),

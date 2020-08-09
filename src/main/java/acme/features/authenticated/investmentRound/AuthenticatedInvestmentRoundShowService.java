@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.investmentRounds.InvestmentRound;
+import acme.entities.roles.Investor;
+import acme.features.authenticated.investor.AuthenticatedInvestorRepository;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
@@ -14,7 +16,10 @@ import acme.framework.services.AbstractShowService;
 public class AuthenticatedInvestmentRoundShowService implements AbstractShowService<Authenticated, InvestmentRound> {
 
 	@Autowired
-	AuthenticatedInvestmentRoundRepository repository;
+	AuthenticatedInvestmentRoundRepository	repository;
+
+	@Autowired
+	AuthenticatedInvestorRepository			repoInvestor;
 
 
 	@Override
@@ -31,7 +36,17 @@ public class AuthenticatedInvestmentRoundShowService implements AbstractShowServ
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "ticker", "creation", "kindRound", "title", "description", "amount", "link", "active", "hasApp", "entrepreneur");
+		int investorId = request.getPrincipal().getAccountId();
+		Investor investor = this.repoInvestor.findOneInvestorByUserAccountId(investorId);
+
+		if (investor != null) {
+			entity.setIsInvestor(true);
+		} else {
+			entity.setIsInvestor(false);
+		}
+
+		request.unbind(entity, model, "ticker", "creation", "kindRound", "title", "description", "amount", "link", "active", "hasApp", "isInvestor", "entrepreneur");
+
 	}
 
 	@Override

@@ -45,7 +45,7 @@ public class EntrepreneurInvestmentRoundListService implements AbstractListServi
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "ticker", "creation", "kindRound", "title", "description", "amount", "link", "hasApp", "entrepreneur");
+		request.unbind(entity, model, "ticker", "creation", "kindRound", "title", "description", "amount", "link", "hasApp", "isInvestor", "entrepreneur");
 
 	}
 

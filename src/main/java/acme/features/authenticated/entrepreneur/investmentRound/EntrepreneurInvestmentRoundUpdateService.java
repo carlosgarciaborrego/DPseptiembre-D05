@@ -61,7 +61,7 @@ public class EntrepreneurInvestmentRoundUpdateService implements AbstractUpdateS
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "ticker", "kindRound", "title", "description", "amount", "link", "active", "hasApp");
+		request.unbind(entity, model, "ticker", "kindRound", "title", "description", "amount", "link", "active", "hasApp", "isInvestor");
 
 	}
 

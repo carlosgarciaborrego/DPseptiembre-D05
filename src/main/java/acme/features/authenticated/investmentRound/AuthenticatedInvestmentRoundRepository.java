@@ -15,4 +15,5 @@ public interface AuthenticatedInvestmentRoundRepository extends AbstractReposito
 
 	@Query("select i from InvestmentRound i where i.active = true")
 	Collection<InvestmentRound> findInvestmentRoundActives();
+
 }

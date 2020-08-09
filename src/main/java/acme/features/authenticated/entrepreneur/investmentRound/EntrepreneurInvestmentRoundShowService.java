@@ -45,7 +45,7 @@ public class EntrepreneurInvestmentRoundShowService implements AbstractShowServi
 			entity.setHasApp(true);
 		}
 
-		request.unbind(entity, model, "ticker", "creation", "kindRound", "title", "description", "amount", "link", "active", "hasApp", "entrepreneur");
+		request.unbind(entity, model, "ticker", "creation", "kindRound", "title", "description", "amount", "link", "active", "hasApp", "isInvestor", "entrepreneur");
 	}
 
 	@Override

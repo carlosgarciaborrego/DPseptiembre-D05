@@ -220,6 +220,7 @@
 		<property name="link" value="http://www.enlace.com" />
 		<property name="hasApp" value="false" />
 		<property name="active" value="true" />
+		<property name="isInvestor" value="false" />
 		<property name="entrepreneur" ref="entrepreneur1" />
 	</bean>
 	
@@ -233,6 +234,7 @@
 		<property name="link" value="http://www.myenlace.com" />
 		<property name="hasApp" value="false" />
 		<property name="active" value="true" />
+		<property name="isInvestor" value="false" />
 		<property name="entrepreneur" ref="entrepreneur2" />
 	</bean>
 	
@@ -246,6 +248,7 @@
 		<property name="link" value="http://www.nba.com" />
 		<property name="hasApp" value="false" />
 		<property name="active" value="false" />
+		<property name="isInvestor" value="false" />
 		<property name="entrepreneur" ref="entrepreneur2" />
 	</bean>
 	
