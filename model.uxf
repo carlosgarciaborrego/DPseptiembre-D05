@@ -440,11 +440,12 @@ has v</panel_attributes>
       <x>1015</x>
       <y>490</y>
       <w>406</w>
-      <h>112</h>
+      <h>126</h>
     </coordinates>
     <panel_attributes>Application
 --
 + ticker: String {NotBlank}
++ tickerOfInvest: String
 + creation: Date {TemporalType.TIMESTAMP}
 + statement: String {NotBlank}
 + offer: Money {NotNull, Valid}

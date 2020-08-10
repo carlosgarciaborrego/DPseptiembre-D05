@@ -35,6 +35,7 @@
         `statement` varchar(255),
         `status` varchar(255),
         `ticker` varchar(255),
+        `ticker_of_invest` varchar(255),
         `investment_round_id` integer not null,
         `investor_id` integer not null,
         primary key (`id`)

@@ -31,7 +31,10 @@ public class EntrepreneurApplicationShowService implements AbstractShowService<E
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "ticker", "creation", "statement", "offer", "status", "answer", "investmentRound", "investor");
+		String tickerInv = this.repository.findTickerOfInvestmentRoundbyIdApp(entity.getId());
+		entity.setTickerOfInvest(tickerInv);
+
+		request.unbind(entity, model, "ticker", "tickerOfInvest", "creation", "statement", "offer", "status", "answer", "investmentRound", "investor");
 	}
 
 	@Override

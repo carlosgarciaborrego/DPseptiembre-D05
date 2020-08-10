@@ -216,7 +216,7 @@
 		<property name="kindRound" value="ANGEL" />
 		<property name="title" value="Titulo de prueba" />
 		<property name="description" value="Descripcion de la prueba" />
-		<property name="amount" value="€300" />
+		<property name="amount" ref="money20" />
 		<property name="link" value="http://www.enlace.com" />
 		<property name="hasApp" value="false" />
 		<property name="active" value="true" />
@@ -230,7 +230,7 @@
 		<property name="kindRound" value="SERIES-A" />
 		<property name="title" value="Titulo de inversion" />
 		<property name="description" value="Descripcion de la inversion" />
-		<property name="amount" value="€200" />
+		<property name="amount" ref="money21" />
 		<property name="link" value="http://www.myenlace.com" />
 		<property name="hasApp" value="false" />
 		<property name="active" value="true" />
@@ -244,7 +244,7 @@
 		<property name="kindRound" value="SEED" />
 		<property name="title" value="titulo de investor3" />
 		<property name="description" value="Descripcion de investor3" />
-		<property name="amount" value="€100" />
+		<property name="amount" ref="money22" />
 		<property name="link" value="http://www.nba.com" />
 		<property name="hasApp" value="false" />
 		<property name="active" value="false" />
@@ -256,7 +256,7 @@
 		<property name="title" value="act-12-001122" />
 		<property name="startDate" value="2020/09/01 08:30" />
 		<property name="endDate" value="2020/10/01 08:30" />
-		<property name="budget" value="€200" />
+		<property name="budget" ref="money23" />
 		<property name="investmentRound" ref="investmentRound1" />
 	</bean>
 	
@@ -264,7 +264,7 @@
 		<property name="title" value="act-12-331122" />
 		<property name="startDate" value="2020/09/05 08:30" />
 		<property name="endDate" value="2020/11/04 08:30" />
-		<property name="budget" value="€100" />
+		<property name="budget" ref="money24" />
 		<property name="investmentRound" ref="investmentRound1" />
 	</bean>
 	
@@ -272,7 +272,7 @@
 		<property name="title" value="act-12-334422" />
 		<property name="startDate" value="2020/09/05 08:30" />
 		<property name="endDate" value="2020/11/04 08:30" />
-		<property name="budget" value="€200" />
+		<property name="budget" ref="money25" />
 		<property name="investmentRound" ref="investmentRound2" />
 	</bean>
 	
@@ -405,6 +405,7 @@
 		
 	<bean name="application1" class="acme.entities.applications.Application">
 		<property name="ticker" value="INV-11-221212" />
+		<property name="tickerOfInvest" value="ASR-10-001100" />
 		<property name="creation" value="2020/07/25 10:30" />
 		<property name="statement" value="Declaración escrita" />
 		<property name="offer" ref="money15" />
@@ -416,6 +417,7 @@
 	
 	<bean name="application2" class="acme.entities.applications.Application">
 		<property name="ticker" value="INV-11-221216" />
+		<property name="tickerOfInvest" value="MMM-10-001100" />
 		<property name="creation" value="2020/07/21 10:30" />
 		<property name="statement" value="Declaración escrita" />
 		<property name="offer" ref="money16" />
@@ -427,6 +429,7 @@
 	
 	<bean name="application3" class="acme.entities.applications.Application">
 		<property name="ticker" value="INV-11-721212" />
+		<property name="tickerOfInvest" value="ASR-10-001100" />
 		<property name="creation" value="2020/07/25 10:30" />
 		<property name="statement" value="Declaración escrita" />
 		<property name="offer" ref="money17" />
@@ -438,6 +441,7 @@
 	
 	<bean name="application4" class="acme.entities.applications.Application">
 		<property name="ticker" value="INV-11-201212" />
+		<property name="tickerOfInvest" value="MMM-10-001100" />
 		<property name="creation" value="2020/07/24 10:30" />
 		<property name="statement" value="Declaración escrita" />
 		<property name="offer" ref="money18" />
@@ -449,6 +453,7 @@
 	
 	<bean name="application5" class="acme.entities.applications.Application">
 		<property name="ticker" value="INV-11-226262" />
+		<property name="tickerOfInvest" value="ASR-10-001100" />
 		<property name="creation" value="2020/07/20 10:30" />
 		<property name="statement" value="Declaración escrita" />
 		<property name="offer" ref="money19" />
@@ -534,7 +539,30 @@
 		<property name="amount" value="500.00" />
 		<property name="currency" value="€" />
 	</bean>
-	
+	<bean name="money20" class="acme.framework.datatypes.Money">
+		<property name="amount" value="500.00" />
+		<property name="currency" value="€" />
+	</bean>
+		<bean name="money21" class="acme.framework.datatypes.Money">
+		<property name="amount" value="300.00" />
+		<property name="currency" value="€" />
+	</bean>
+		<bean name="money22" class="acme.framework.datatypes.Money">
+		<property name="amount" value="100.00" />
+		<property name="currency" value="€" />
+	</bean>	
+	<bean name="money23" class="acme.framework.datatypes.Money">
+		<property name="amount" value="200.00" />
+		<property name="currency" value="€" />
+	</bean>
+		<bean name="money24" class="acme.framework.datatypes.Money">
+		<property name="amount" value="300.00" />
+		<property name="currency" value="€" />
+	</bean>
+		<bean name="money25" class="acme.framework.datatypes.Money">
+		<property name="amount" value="300.00" />
+		<property name="currency" value="€" />
+	</bean>
 	<bean id="customisation1" class="acme.entities.customisationParameters.CustomisationParameters">	
 		<property name="spamThreshold" value="2.50"/>  
 		<property name="spamWordsEn" value="sex, hard core, viagra, cialis, nigeria, you´ve won, million dollar"/>

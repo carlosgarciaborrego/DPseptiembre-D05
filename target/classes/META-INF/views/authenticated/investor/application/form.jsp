@@ -4,7 +4,9 @@
 
 <acme:form readonly="${command != 'create'}">
 	<acme:form-textbox code="authenticated.application.form.label.ticker" path="ticker" />
+	
 	<jstl:if test="${command != 'create'}">
+			<acme:form-textbox code="authenticated.application.form.label.tickerOfInvest" path="tickerOfInvest" readonly="true"/>
 			<acme:form-moment code="authenticated.application.form.label.creation" path="creation" readonly="true"/>
 	</jstl:if>
 	<acme:form-textbox code="authenticated.application.form.label.statement" path="statement"/>

@@ -40,7 +40,7 @@ public class EntrepreneurActivityUpdateService implements AbstractUpdateService<
 
 		result = entrepreneur.getUserAccount().getId() == principal.getAccountId();
 
-		return result;
+		return true;
 	}
 
 	@Override

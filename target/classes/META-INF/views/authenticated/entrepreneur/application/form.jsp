@@ -4,6 +4,7 @@
 
 <acme:form >
 	<acme:form-textbox code="authenticated.application.form.label.ticker" path="ticker" readonly="true"/>
+	<acme:form-textbox code="authenticated.application.form.label.tickerOfInvest" path="tickerOfInvest" readonly="true"/>
 	<acme:form-moment code="authenticated.application.form.label.creation" path="creation" readonly="true"/>
 	<jstl:if test="${status == 'Pending' || (status == 'Rejected' && answer == '')}">
 			<acme:form-select code="authenticated.application.form.label.status" path="status">

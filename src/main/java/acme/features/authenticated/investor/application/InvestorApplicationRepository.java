@@ -32,4 +32,7 @@ public interface InvestorApplicationRepository extends AbstractRepository {
 
 	@Query("select ua from Application ua where ua.ticker = ?1")
 	Application findByTicker(String ticker);
+
+	@Query("select a.investmentRound.ticker from Application a where a.id = ?1")
+	String findTickerOfInvestmentRoundbyIdApp(int id);
 }

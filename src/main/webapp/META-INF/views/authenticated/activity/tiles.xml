@@ -7,11 +7,11 @@
 <tiles-definitions>
 	
 	<definition name="authenticated/activity/form" extends="master">
-		<put-attribute name="body" type="template" value="../authenticated/investor/activity/form.jsp" />
+		<put-attribute name="body" type="template" value="../authenticated/activity/form.jsp" />
 	</definition>
 	
 	<definition name="authenticated/activity/list" extends="master">
-		<put-attribute name="body" type="template" value="../authenticated/investor/activity/list.jsp" />
+		<put-attribute name="body" type="template" value="../authenticated/activity/list.jsp" />
 	</definition>
 
 </tiles-definitions>			

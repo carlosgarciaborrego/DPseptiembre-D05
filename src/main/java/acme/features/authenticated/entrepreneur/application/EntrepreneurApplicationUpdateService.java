@@ -60,7 +60,7 @@ public class EntrepreneurApplicationUpdateService implements AbstractUpdateServi
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "ticker", "statement", "offer", "status", "answer", "investmentRound", "investor");
+		request.unbind(entity, model, "ticker", "tickerOfInvest", "statement", "offer", "status", "answer", "investmentRound", "investor");
 	}
 
 	@Override

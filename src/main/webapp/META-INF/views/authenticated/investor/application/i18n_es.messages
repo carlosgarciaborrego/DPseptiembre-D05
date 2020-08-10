@@ -1,4 +1,5 @@
 authenticated.application.form.label.ticker = Ticker:
+authenticated.application.form.label.tickerOfInvest = Ticker de ronda de inversión:
 authenticated.application.form.label.creation = Creación:
 authenticated.application.form.label.statement = Declaración:
 authenticated.application.form.label.offer = Oferta:

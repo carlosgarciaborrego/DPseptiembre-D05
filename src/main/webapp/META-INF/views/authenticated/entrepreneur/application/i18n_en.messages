@@ -1,4 +1,5 @@
 authenticated.application.form.label.ticker = Ticker:
+authenticated.application.form.label.tickerOfInvest = Ticker of Investment Round:
 authenticated.application.form.label.creation = Creation:
 authenticated.application.form.label.status = Status:
 authenticated.application.form.label.statement = Statement:
